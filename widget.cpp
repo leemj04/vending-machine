@@ -74,8 +74,8 @@ void Widget::on_btn_reset_clicked()
     num10  = money /  10; money %=  10;
     mb.information(this, "changes", "500: "+QString::number(num500)+
                                   "\n100: "+QString::number(num100)+
-                                  "\n50: "+QString::number(num50)+
-                                  "\n10: "+QString::number(num10));
+                                   "\n50: "+QString::number(num50)+
+                                   "\n10: "+QString::number(num10));
     ui->lcdNumber->display(money);
 }
 

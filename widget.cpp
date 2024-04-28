@@ -15,18 +15,10 @@ Widget::~Widget() {
 
 void Widget::changeMoney(int diff) {
     money += diff;
-    ui->btn_coffee->setEnabled(false);
-    ui->btn_tea->setEnabled(false);
-    ui->btn_milk->setEnabled(false);
-    if (money >= 100) {
-        ui->btn_coffee->setEnabled(true);
-    }
-    if (money >= 150) {
-        ui->btn_tea->setEnabled(true);
-    }
-    if (money >= 200) {
-        ui->btn_milk->setEnabled(true);
-    }
+    ui->btn_coffee->setEnabled(money >= 100);
+    ui->btn_tea->setEnabled(money >= 150);
+    ui->btn_milk->setEnabled(money >= 200);
+    
     ui->lcdNumber->display(money);
 }
 
